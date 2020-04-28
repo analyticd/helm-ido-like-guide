@@ -438,21 +438,21 @@ If you want to load all configurations from this guide
 require the file in your init and call =(helm-ido-like)=.
 
 #+BEGIN_SRC emacs-lisp :tangle helm-ido-like.el
-;;;###autoload
-(defun helm-ido-like ()
-  "Configure and activate `helm', `helm-fuzzier' and `helm-flx'."
-  (interactive)
-  (helm-ido-like-activate-helm-modes)
-  (helm-ido-like-load-ido-like-bottom-buffer)
-  (helm-ido-like-hide-modelines)
-  (helm-ido-like-hide-helm-modeline)
-  (helm-ido-like-header-lines-maybe)
-  (helm-ido-like-setup-bg-color)
-  (helm-ido-like-load-file-nav)
-  (helm-ido-like-no-dots)
-  (helm-ido-like-load-fuzzy-enhancements)
-  (helm-ido-like-fix-fuzzy-files))
+  ;;;###autoload
+  (defun helm-ido-like ()
+    "Configure and activate `helm', `helm-fuzzier' and `helm-flx'."
+    (interactive)
+    (helm-ido-like-activate-helm-modes)
+    (helm-ido-like-load-ido-like-bottom-buffer)
+    (helm-ido-like-hide-modelines)
+    (helm-ido-like-hide-helm-modeline)
+    (helm-ido-like-header-lines-maybe)
+    ;; (helm-ido-like-setup-bg-color)
+    (helm-ido-like-load-file-nav)
+    (helm-ido-like-no-dots)
+    ;; (helm-ido-like-load-fuzzy-enhancements)
+    (helm-ido-like-fix-fuzzy-files))
 
-(provide 'helm-ido-like)
-;;; helm-ido-like.el ends here
+  (provide 'helm-ido-like)
+  ;;; helm-ido-like.el ends here
 #+END_SRC
